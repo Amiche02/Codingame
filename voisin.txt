@@ -1,0 +1,73 @@
+ Objectif
+Le jeu se joue sur une grille rectangulaire de taille variable représentant une micro-puce. Certaines cellules de la grille contiennent des nœuds d'alimentation. Les autres cellules sont vides.
+
+Le but est d'indiquer, s'ils existent, le voisin horizontal et le voisin vertical de chaque nœud d'alimentation.
+  Règles
+Pour ce faire, vous devez trouver chaque nœud de coordonnées (x1,y1) et afficher les coordonnées (x2,y2) du premier nœud situé sur sa droite et les coordonnées (x3,y3) du premier nœud situé sous lui dans la grille.
+
+Si un voisin n'existe pas, vous devez afficher les coordonnées -1 -1 en lieu et place des coordonnées (x2,y2) et/ou (x3,y3).
+
+Vous perdez si :
+
+    Vous indiquez un voisin incorrect pour un nœud donné.
+    Vous indiquez un voisin pour une cellule vide.
+    Vous fournissez deux fois les voisins d'un nœud donné.
+    Vous oubliez un nœud dans votre liste.
+
+ 
+Conditions de victoire
+Vous gagnez la partie quand tous les voisins de tous les nœuds ont été affichés de manière correcte.
+  Exemple
+Dans cet exemple, il y a trois nœuds dans une grille de 2x2. La cellule (1,1) est vide.
+ 
+
+00
+0.
+
+ 
+Le nœud de la cellule (0,0) a 2 voisins.
+0 0 1 0 0 1
+ 
+Le nœud de la cellule (1,0) n'a aucun voisin.
+1 0 -1 -1 -1 -1
+ 
+Le nœud de la cellule (0,1) n'a aucun voisin.
+0 1 -1 -1 -1 -1
+  Note
+N'oubliez pas d'exécuter les tests depuis la fenêtre "Jeu de tests".
+
+Attention : les tests fournis et les validateurs utilisés pour le calcul du score final sont similaires mais différents (pas de points pour les solutions "hardcodées").
+
+Remarque concernant le visualisateur :
+
+    Le mode debug est accessible depuis le panneau des options (roue dentée)
+    Vous pouvez zoomer/dézoomer avec la molette et vous déplacer par drag'n drop (utile pour les grandes grilles)
+
+  Entrées du jeu
+Votre programme doit d'abord lire les données d'initialisation depuis l'entrée standard, puis écrire sur la sortie standard les données demandées.
+Entrées d'initialisation
+
+Ligne 1 : un entier width indiquant la largeur de la grille (axe des x).
+
+Ligne 2 : un entier height indiquant la hauteur de la grille (axe des y). La coordonnée (0,0) indique la cellule située en haut à gauche de la grille.
+
+Les height lignes suivantes : une chaîne de caractères line de longueur width représentant une ligne de la grille. Un point . représente une cellule vide. Un zéro 0 représente une cellule contenant un nœud.
+Sortie pour un tour de jeu
+Une ligne par nœud. Sur chaque ligne, une suite de six entiers : x1  y1  x2  y2  x3  y3
+
+Avec :
+
+    (x1,y1) désignent les coordonnées du nœud
+    (x2,y2) désignent les coordonnées du voisin de droite du nœud.
+    (x2,y3) désignent les coordonnées du voisin vertical situé en dessous du nœud.
+
+En l'absence de voisin, les coordonnées à afficher sont -1 -1
+Contraintes
+0 < width ≤ 30
+0 < height ≤ 30
+0 ≤ x1 < width
+0 ≤ y1 < height
+-1 ≤ x2, x3 < width
+-1 ≤ y2, y3 < height
+Temps de réponse première ligne ≤ 1s
+Temps de réponse entre chaque ligne ≤ 150ms

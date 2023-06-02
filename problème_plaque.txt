@@ -1,0 +1,31 @@
+You witnessed a hit and run, and are trying to identify the driver to the authorities, but you only remember part of the licence plate, the colour of the car and the type of car (sedan, coupe or SUV).
+
+You are given the details of the car you remember in the format: registration_number colour and car_type, but the registration number will have *s in place of the characters you can't remember.
+
+Following this, you are given an integer n and a list of n vehicles described by three space-separated details in the same format, but with complete registration_numbers.
+
+Print out all the cars in the list (in their original order) that match your recollections to help identify the hit and run driver!
+Entrée
+Line 1: Your recollection of the guilty driver in the format registration_number colour car_type, but with *s in place of the characters you can't remember in the registration_number.
+Line 2: An integer n, the number of vehicles on the suspect list.
+n Lines: Suspect vehicle descriptions in the same format registration col car
+Sortie
+1 or more Lines: The vehicles from the list that match your recollection, in the same order and format they appeared in the list.
+Contraintes
+1 < n ≤ 100
+At least one vehicle will match your recollection for each test.
+registration_numbers will only contain uppercase letters, numbers and hyphens.
+You are always sure about the format of the registration, even if you don't remember any of the characters, you at least remember the number of characters and the hyphen positions.
+Exemple
+Entrée
+
+A**-*3* white coupe
+4
+ERS-32S white coupe
+KSO-21D black sedan
+ASF-23K white coupe
+AS-AS-32 black SUV
+
+Sortie
+
+ASF-23K white coupe
