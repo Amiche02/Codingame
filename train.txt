@@ -1,0 +1,12 @@
+Un train se déplace le long d'une voie ferrée d'une longueur de L pieds et avance à une vitesse de départ de S pieds/seconde. La vitesse du train diminue de moitié chaque seconde.
+
+Exemple :
+L = 10
+S = 5
+pos = position du train le long de la voie
+
+0 seconde : s=5, pos=0
+1 seconde : s=2.5, pos=5
+2 secondes : s=1.75, pos=7.5
+etc....
+À mesure que la vitesse diminue, la position du train le long de la voie se rapprochera de 9.9999999999 pieds, mais pas de 10. Par conséquent, la sortie pour cet exemple serait false.

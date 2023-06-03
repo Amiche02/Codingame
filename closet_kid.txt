@@ -1,0 +1,14 @@
+Input is a rectangular playground.
+You are the * asterisk.
+The letters are the other kids in a game of tag.
+Who is closest to you?
+
+Note: Distance is measured "as the crow flies" (aka Euclidean distance)
+Entrée
+Line 1: An integer heightOfPlayground
+Next heightOfPlayground lines: Strings (all the same width), representing the playground, including yourself and the other kids
+Sortie
+Line 1: The kid that is closest to you
+Contraintes
+• There are no ties. In other words, exactly one kid is closest to you.
+• Each kid is represented by a letter: can be uppercase or lowercase. It is case-sensitive.
